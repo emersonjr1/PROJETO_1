@@ -1,27 +1,30 @@
-body{
+/* Reseta margens e padding */
+body {
     margin: 0;
     padding: 0;
-    font-family: Helvetica;
-    background-image: linear-gradient( to right, #e65763, #34073D) ;
+    font-family: Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #e65763, #34073D);
     background-image: url(../imagens/Abstract-Gradient-Background-Graphics-4067191-1.jpg);
     color: white;
     background-repeat: no-repeat;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     text-align: center;
     padding-top: 50px;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
-#tasks-container{
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+/* Ajustando container de tarefas */
+#tasks-container {
+    max-width: 90%; /* Em telas pequenas, ele ocupa 90% da tela */
+    width: 500px; /* Máximo de 500px em telas grandes */
+    margin: 0 auto; /* Centraliza */
 }
 
 /* tasks form */
-
-#task-header{
+#task-header {
     margin-top: 40px;
 }
 
@@ -29,21 +32,13 @@ body{
     position: relative;
 }
 
-#add-task-form input{
+#add-task-form input {
     box-sizing: border-box;
     border: 1px solid #34073D;
     background-color: white;
     padding: 15px;
     font-size: 18px;
     width: 100%;
-}
-
-#add-task-form input:placeholder {
-    color: #34073D;
-}
-
-#add-task-form input:focus {
-    outline: none;
 }
 
 #add-btn {
@@ -63,91 +58,60 @@ ion-icon {
     font-size: 25px;
 }
 
-/*tasks container  */
-
-#task-list{
-    list-style: none;
-    padding-left: 0;
-}
-
-#task-list li {
-    text-align: left;
-    height: 50px;
-    line-height: 50px;
-    position: relative;
-    border-bottom: 3px solid #34073D;
-    color: #34073D;
-    margin-bottom: 10px;
-    padding-left: 15px;
-    background-color: white;
-    transition: .5s;
-    font-weight: bold;
-    border-radius: 10px;
-}
-
-#task-list li span {
-    font-size: 18px;
-}
-
-#task-list ion-icon{
-    position: absolute;
-    top: 0;
-    height: 40px;
-    transition: .5s;
-    cursor: point;
-    width: 30px;
-    padding: 5px;
-
-}
-
-.done-btn{
-    right: 40px;
-}
-
-.remove-btn{
-    right: 0;
-}
-
-.done-btn:hover {
-    color: white;
-    background-color: #059611;
-}
-.remove-btn:hover {
-    color: white;
-    background-color: rgb(147, 4, 4);
-
-}
-
-.hide {
-    display: none;
-}
-
-#task-list li.done{
-    background-color: #34073d ;
-    color: white;
-    text-decoration: line-through;
-}
-
+/* Ajustes no rodapé */
 footer {
-        background-color: black;
-        color: white;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        margin: 0;
-        padding: 2px;
-        display: flex;
-        align-items: center; /* Centraliza verticalmente */
-    }   
-    #prodape {
-        font-family: cursive;
-        font-size: 0.2em;
-        
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between; /* Alinha os itens à esquerda e à direita */
+    align-items: center; /* Centraliza verticalmente */
+    position: relative;
+    margin-top: auto; /* Mantém o footer sempre no final */
+}
+
+#prodape {
+    font-family: cursive;
+    font-size: 0.9em; /* Ajustado para um tamanho mais legível */
+    text-align: center;
+    flex-grow: 1; /* Faz com que o texto ocupe o máximo possível */
+}
+
+/* Imagem no footer */
+footer > img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+/* 🔽 MEDIA QUERIES - Ajustes para telas menores (celulares) 🔽 */
+@media (max-width: 768px) {
+    #tasks-container {
+        max-width: 95%; /* Em telas menores, usa 95% da largura */
     }
-    
+
+    #add-task-form input {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #add-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    footer {
+        flex-direction: column; /* Quebra em duas linhas no celular */
+        text-align: center;
+        padding: 10px;
+    }
 
     footer > img {
-        width: 30px;
-        height: 30px;
-        margin-left: 4px;
+        margin: 0 auto; /* Centraliza a imagem no mobile */
     }
+
+    #prodape {
+        font-size: 0.8em; /* Ajusta o tamanho do texto para não ficar pequeno demais */
+    }
+}
