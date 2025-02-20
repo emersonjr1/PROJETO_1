@@ -152,50 +152,7 @@ footer {
         margin-left: 4px;
     }
 
-    /* 🔽 MEDIA QUERIES - Ajustes para telas menores (celulares e tablets) 🔽 */
-@media (max-width: 768px) {
-    body {
-        padding-top: 20px; /* Reduz espaço superior */
-        text-align: center;
-        background-size: cover;
-    }
-
-    #tasks-container {
-        max-width: 95%; /* Ocupa quase toda a tela */
-    }
-
-    #add-task-form input {
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    #add-btn {
-        width: 50px;
-        height: 50px;
-    }
-
-    #task-list li {
-        font-size: 16px; /* Reduz o tamanho das tarefas */
-        height: auto;
-        line-height: normal;
-        padding: 10px;
-    }
-
-    footer {
-        flex-direction: column; /* Organiza os itens do footer em coluna */
-        text-align: center;
-        padding: 10px;
-        position: relative; /* Para evitar sobreposição */
-    }
-
-    footer > img {
-        margin: 5px auto; /* Centraliza a imagem no mobile */
-    }
-
-    #prodape {
-        font-size: 0.8em; /* Ajusta o tamanho do texto */
-    }
-}
+  
 
 /* RESET GERAL PARA EVITAR MARGENS INDESEJADAS */
 * {
