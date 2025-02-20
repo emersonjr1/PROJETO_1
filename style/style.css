@@ -1,11 +1,15 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: Helvica;
-    background-image: linear-gradient( to right, #e65763, #34073D);
+    font-family: Helvetica;
+    background-image: linear-gradient( to right, #e65763, #34073D) ;
+    background-image: url(../imagens/Abstract-Gradient-Background-Graphics-4067191-1.jpg);
     color: white;
+    background-repeat: no-repeat;
+    height: 100%;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 50px;
+    background-size: cover;
 }
 
 #tasks-container{
@@ -122,3 +126,27 @@ ion-icon {
     color: white;
     text-decoration: line-through;
 }
+
+footer {
+        background-color: black;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 2px;
+        display: flex;
+        align-items: center; /* Centraliza verticalmente */
+    }   
+    #prodape {
+        font-family: cursive;
+        font-size: 0.2em;
+        
+    }
+    
+
+    footer > img {
+        width: 30px;
+        height: 30px;
+        margin-left: 4px;
+    }
