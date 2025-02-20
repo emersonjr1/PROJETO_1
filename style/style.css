@@ -151,3 +151,153 @@ footer {
         height: 30px;
         margin-left: 4px;
     }
+
+    /* 🔽 MEDIA QUERIES - Ajustes para telas menores (celulares e tablets) 🔽 */
+@media (max-width: 768px) {
+    body {
+        padding-top: 20px; /* Reduz espaço superior */
+        text-align: center;
+        background-size: cover;
+    }
+
+    #tasks-container {
+        max-width: 95%; /* Ocupa quase toda a tela */
+    }
+
+    #add-task-form input {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #add-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    #task-list li {
+        font-size: 16px; /* Reduz o tamanho das tarefas */
+        height: auto;
+        line-height: normal;
+        padding: 10px;
+    }
+
+    footer {
+        flex-direction: column; /* Organiza os itens do footer em coluna */
+        text-align: center;
+        padding: 10px;
+        position: relative; /* Para evitar sobreposição */
+    }
+
+    footer > img {
+        margin: 5px auto; /* Centraliza a imagem no mobile */
+    }
+
+    #prodape {
+        font-size: 0.8em; /* Ajusta o tamanho do texto */
+    }
+}
+
+/* RESET GERAL PARA EVITAR MARGENS INDESEJADAS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Garante que a página ocupe toda a altura da tela */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* O main vai crescer para ocupar o espaço disponível */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTAINER PRINCIPAL */
+#tasks-container {
+    width: 90%;
+    max-width: 500px; /* Mantém limite para telas grandes */
+}
+
+/* BOTÃO */
+#add-btn {
+    width: 60px;
+    height: 53px;
+}
+
+/* LISTA DE TAREFAS */
+#task-list {
+    width: 100%;
+}
+
+/* RODAPÉ FIXO NO FINAL DA TELA */
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* IMAGEM DO RODAPÉ */
+footer img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* TEXTO DO RODAPÉ */
+#prodape {
+    font-family: cursive;
+    font-size: 0.7em;
+}
+
+/* 🔽 MEDIA QUERIES PARA AJUSTAR NO CELULAR 🔽 */
+@media (max-width: 768px) {
+    body {
+        padding-top: 20px;
+    }
+
+    #tasks-container {
+        width: 95%;
+    }
+
+    #add-task-form input {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #add-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    #task-list li {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    footer img {
+        margin-bottom: 0;
+        transform: translate(-300px, 25px);
+    }
+
+    #prodape {
+        font-size: 0.7em;
+    }
+}
