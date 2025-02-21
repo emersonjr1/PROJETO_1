@@ -1,3 +1,5 @@
+alert("Seja bem vindo!")
+
 // funçao que adiciona tarefa
 function addTask(){
 
