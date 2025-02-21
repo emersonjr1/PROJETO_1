@@ -12,6 +12,9 @@ body{
     padding-top: 50px;
     background-size: cover;
 }
+h2{
+    padding-top: 50px;
+}
 
 #tasks-container{
     width: 500px;
@@ -251,7 +254,7 @@ footer img {
 
     footer img {
         margin-bottom: 0;
-        );
+        transform: translate(-200px, 30px);
     }
 
     #prodape {
